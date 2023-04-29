@@ -1,0 +1,8 @@
+pygame
+neat
+os
+math
+numpy
+PIL
+wget
+PygameUtils
