@@ -15,10 +15,16 @@ def download_files():
 	red_car_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/red-car.png"
 	sample_track_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/track.png"
 	config_file_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/config.txt"
+	draw_track_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/draw_track.png"
+	exit_btn_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/exit.png"
+	start_btn_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/start.jpg"
 	wget.download(car_url)
 	wget.download(red_car_url)
 	wget.download(sample_track_url)
 	wget.download(config_file_url)
+	wget.download(draw_track_url)
+	wget.download(exit_btn_url)
+	wget.download(start_btn_url)
 
 print("***** If you dont have any images or config files feel free to use mine at 'https://github.com/timo42453189/car_drive_ai_files' *****")
 print("***** if you have no images just call the download_files methode *****")
