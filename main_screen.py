@@ -3,6 +3,7 @@ import os
 import main
 import PygameUtils as pu
 import draw_main
+import wget
 
 pygame.init()
 pygame.font.init()
@@ -14,9 +15,18 @@ FPS = 60
 radar_d = pu.checkbox((0, 0, 0), 123, 123, 50, 50, outline=4, text="Visualize")
 download_c = pu.checkbox((0, 0, 0), 123, 200, 50, 50, outline=4, text="Download my assets and config files")
 
-START = pygame.image.load(os.path.join("start.jpg"))
-DRAW = pygame.image.load(os.path.join("draw_track.png"))
+try:
+    START = pygame.image.load(os.path.join("start.jpg"))
+    DRAW = pygame.image.load(os.path.join("draw_track.png"))
+except:
+    start_btn_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/start.jpg"
+    draw_track_url = "https://raw.githubusercontent.com/timo42453189/car_drive_ai_files/main/draw_track.png"
+    wget.download(start_btn_url)
+    wget.download(draw_track_url)
+    START = pygame.image.load(os.path.join("start.jpg"))
+    DRAW = pygame.image.load(os.path.join("draw_track.png"))
 DRAW = pygame.transform.scale(DRAW, (400, 300))
+
 
 buttons = []
 
